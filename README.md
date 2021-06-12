@@ -8,7 +8,7 @@ El mapa puede verse en:
 **Capa geoespacial de cantones de Costa Rica**  
 ```sh
 cd datos
-ogr2ogr -f GeoJSON -t_srs EPSG:4326 -makevalid cantones.geojson WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"
+ogr2ogr -t_srs EPSG:4326 -makevalid cantones.geojson WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"
 ```
 
 ## Procesamiento
