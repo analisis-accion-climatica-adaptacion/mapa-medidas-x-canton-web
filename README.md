@@ -26,13 +26,14 @@ a. Se obtuvieron los campos ```cod_canton``` y ```canton``` con los siguientes c
 $ cd datos
 $ ogr2ogr temp.csv cantones.geojson
 $ cut -d, -f4-5 temp.csv > medidas-adaptacion-x-canton.csv
+$ rm temp.csv
 ```
 
 b. Se abrió el archivo en Calc y se ordenó por ```cod_canton```.
 
 c. Se agregó manualmente una columna llamada ```provincia``` con el nombre de la provincia.
 
-d. Se agregó manualmente una columna llamada ```medidas``` con la cantidad de medidas de acción climática para cada cantón, provenientes del archivo ```Acciones de adaptación por cantón EVC.xlsx```, proporcionado por Erick Vargas.
+d. Se agregó manualmente una columna llamada ```medidas``` con la cantidad de medidas de acción climática para cada cantón, provenientes del archivo ```datos/originales/Acciones de adaptación por cantón EVC.xlsx```, proporcionado por Erick Vargas.
 
 e. El archivo se guardó y se publicó también en la dirección [https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing](https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing).
 
