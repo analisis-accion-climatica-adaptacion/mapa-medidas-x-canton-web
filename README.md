@@ -6,7 +6,9 @@ El mapa puede verse en:
 
 ## Entradas
 **Capa geoespacial de cantones de Costa Rica**  
-Archivo: ```datos/cantones.geojson```
+
+Archivo: ```datos/cantones.geojson```  
+
 Se obtuvo del nodo del Instituto Geográfico Nacional (IGN) en el [Sistema Nacional de Información Territorial (SNIT)](https://www.snitcr.go.cr/), con el comando [ogr2ogr](https://gdal.org/programs/ogr2ogr.html#ogr2ogr) de la biblioteca [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/).
 ```sh
 cd datos
