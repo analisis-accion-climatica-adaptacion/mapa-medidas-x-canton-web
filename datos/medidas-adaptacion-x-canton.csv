@@ -1,0 +1,83 @@
+cod_canton,canton,provincia,medidas
+101,San José,San José,12
+102,Escazú,San José,7
+103,Desamparados,San José,7
+104,Puriscal,San José,8
+105,Tarrazú,San José,8
+106,Aserrí,San José,7
+107,Mora,San José,7
+108,Goicoechea,San José,8
+109,Santa Ana,San José,6
+110,Alajuelita,San José,9
+111,Vázquez de Coronado,San José,6
+112,Acosta,San José,4
+113,Tibás,San José,8
+114,Moravia,San José,5
+115,Montes de Oca,San José,10
+116,Turrubares,San José,5
+117,Dota,San José,7
+118,Curridabat,San José,13
+119,Pérez Zeledón,San José,9
+120,León Cortés Castro,San José,8
+201,Alajuela,Alajuela,5
+202,San Ramón,Alajuela,9
+203,Grecia,Alajuela,5
+204,San Mateo,Alajuela,9
+205,Atenas,Alajuela,7
+206,Naranjo,Alajuela,4
+207,Palmares,Alajuela,5
+208,Poás,Alajuela,5
+209,Orotina,Alajuela,7
+210,San Carlos,Alajuela,7
+211,Zarcero,Alajuela,7
+212,Sarchí,Alajuela,5
+213,Upala,Alajuela,10
+214,Los Chiles,Alajuela,10
+215,Guatuso,Alajuela,10
+216,Río Cuarto,Alajuela,
+301,Cartago,Cartago,8
+302,Paraíso,Cartago,7
+303,La Unión,Cartago,11
+304,Jiménez,Cartago,7
+305,Turrialba,Cartago,8
+306,Alvarado,Cartago,8
+307,Oreamuno,Cartago,6
+308,El Guarco,Cartago,7
+401,Heredia,Heredia,7
+402,Barva,Heredia,5
+403,Santo Domingo,Heredia,5
+404,Santa Bárbara,Heredia,5
+405,San Rafael,Heredia,5
+406,San Isidro,Heredia,5
+407,Belén,Heredia,6
+408,Flores,Heredia,5
+409,San Pablo,Heredia,5
+410,Sarapiquí,Heredia,13
+501,Liberia,Guanacaste,17
+502,Nicoya,Guanacaste,14
+503,Santa Cruz,Guanacaste,13
+504,Bagaces,Guanacaste,8
+505,Carrillo,Guanacaste,13
+506,Cañas,Guanacaste,14
+507,Abangares,Guanacaste,7
+508,Tilarán,Guanacaste,7
+509,Nandayure,Guanacaste,9
+510,La Cruz,Guanacaste,12
+511,Hojancha,Guanacaste,15
+601,Puntarenas,Puntarenas,10
+602,Esparza,Puntarenas,9
+603,Buenos Aires,Puntarenas,6
+604,Montes de Oro,Puntarenas,4
+605,Osa,Puntarenas,9
+606,Quepos,Puntarenas,7
+607,Golfito,Puntarenas,8
+608,Coto Brus,Puntarenas,11
+609,Parrita,Puntarenas,5
+610,Corredores,Puntarenas,4
+611,Garabito,Puntarenas,6
+701,Limón,Limón,7
+702,Pococí,Limón,7
+703,Siquirres,Limón,3
+704,Talamanca,Limón,10
+705,Matina,Limón,4
+706,Guácimo,Limón,6
