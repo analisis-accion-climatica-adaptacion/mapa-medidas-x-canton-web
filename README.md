@@ -44,8 +44,14 @@ Nombre del archivo: ```datos/cantones-medidas.geojson```
 Se obtuvo con el siguiente comando ```ogr2ogr```:
 ```sh
 $ cd datos
+$ ogr2ogr -t_srs EPSG:5367 cantones-crtm05.geojson cantones.geojson
+$ ogr2ogr -simplify 10 cantones-simp10-crtm05.geojson cantones-crtm05.geojson
+$ ogr2ogr -t_srs EPSG:4326 cantones.geojson cantones-simp10-crtm05.geojson
 $ ogr2ogr -sql "select cantones.provincia AS provincia, cantones.cod_canton AS cod_canton, cantones.canton AS canton, cast(medidas.medidas as integer) AS medidas from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
+$ rm cantones-crtm05.geojson
+$ rm cantones-simp10-crtm05.geojson
 ```
+**NOTA: la simplificación debería realizarse desde el principio**
 
 ## Procesamiento
 El código fuente de la aplicación web está disponible en:  
