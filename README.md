@@ -1,5 +1,5 @@
 # Mapa de medidas de acción climática por cantón - versión web
-Este repositorio contiene el código fuente de un programa que construye un mapa que muestra la cantidad de medidas de acción climática en cada cantón de Costa Rica. Se programó en el lenguaje [JavaScript](https://en.wikipedia.org/wiki/JavaScript), con la biblioteca [Leaflet](https://leafletjs.com/).
+Este repositorio contiene el código fuente de un programa que construye un mapa que muestra la cantidad de medidas de acción climática en cada cantón de Costa Rica. Se programó en el lenguaje [JavaScript](https://en.wikipedia.org/wiki/JavaScript), con la biblioteca [Leaflet](https://leafletjs.com/) y su complemento [Leaflet Choropleth](https://github.com/timwis/leaflet-choropleth).
 
 El mapa puede verse en:
 
@@ -44,7 +44,7 @@ Nombre del archivo: ```datos/cantones-medidas.geojson```
 Se obtuvo con el siguiente [ogr2ogr](https://gdal.org/programs/ogr2ogr.html#ogr2ogr) de la biblioteca [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/):
 ```sh
 $ cd datos
-$ ogr2ogr -sql "select cantones.*, medidas.medidas from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
+$ ogr2ogr -sql "select cantones.*, cast(medidas.medidas as integer) from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
 ```
 
 ## Procesamiento
