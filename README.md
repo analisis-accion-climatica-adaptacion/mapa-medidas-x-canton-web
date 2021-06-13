@@ -41,7 +41,7 @@ e. El archivo se guardó y se publicó también en la dirección [https://drive.
 
 Nombre del archivo: ```datos/cantones-medidas.geojson```  
 
-Se obtuvo con el siguiente [ogr2ogr](https://gdal.org/programs/ogr2ogr.html#ogr2ogr) de la biblioteca [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/):
+Se obtuvo con el siguiente comando ```ogr2ogr```:
 ```sh
 $ cd datos
 $ ogr2ogr -sql "select cantones.*, cast(medidas.medidas as integer) from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
