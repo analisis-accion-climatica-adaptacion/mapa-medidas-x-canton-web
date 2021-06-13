@@ -37,7 +37,7 @@ d. Se agregó manualmente una columna llamada ```medidas``` con la cantidad de m
 
 e. El archivo se guardó y se publicó también en la dirección [https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing](https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing).
 
-**3. Archivo GeoJSON con capa geoespacial de cantones + columna ```medidas``` del archivo CSV con datos de medidas de acción climática**  
+**3. Archivo GeoJSON con capa geoespacial de cantones más la columna ```medidas``` proveniente del archivo CSV con datos de medidas de acción climática**  
 
 Nombre del archivo: ```datos/cantones-medidas.geojson```  
 
