@@ -51,7 +51,7 @@ $ ogr2ogr -sql "select cantones.provincia AS provincia, cantones.cod_canton AS c
 El código fuente de la aplicación web está disponible en:  
 [https://github.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web](https://github.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web)
 
-El procesamiento se realiza principalmente con el archivo JavaScript en:  
+El procesamiento se realiza principalmente con el archivo JavaScript:  
 [https://github.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web/blob/main/js/scripts.js](https://github.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web/blob/main/js/scripts.js)
 
 ## Salidas
