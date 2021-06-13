@@ -1,6 +1,7 @@
-#mapid { 
-  height: 700px;
-  width: 700px;
+/* Tamaño del mapa */
+html, body, #mapid {
+    height: 100%;
+    width: 100%;
 }
 
 

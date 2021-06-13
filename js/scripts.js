@@ -1,5 +1,5 @@
 // Mapa Leaflet
-var mapa = L.map('mapid').setView([9.9, -84.10], 10);
+var mapa = L.map('mapid').setView([9.6, -84.10], 8);
 
 
 // Definición de capas base
@@ -26,7 +26,7 @@ L.control.scale().addTo(mapa);
 
 // Capa de coropletas de medidas de acción climática en adaptación en los cantones de Costa Rica
 $.getJSON('https://raw.githubusercontent.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web/main/datos/cantones-medidas.geojson', function (geojson) {
-  var capa_cantones_gam_coropletas = L.choropleth(geojson, {
+  var capa_cantones_medidas = L.choropleth(geojson, {
 	  valueProperty: 'medidas',
 	  scale: ['yellow', 'brown'],
 	  steps: 5,
@@ -40,14 +40,14 @@ $.getJSON('https://raw.githubusercontent.com/analisis-accion-climatica-adaptacio
 	    layer.bindPopup('Cantón: ' + feature.properties.canton + '<br>' + feature.properties.medidas)
 	  }
   }).addTo(mapa);
-  control_capas.addOverlay(capa_cantones_gam_coropletas, 'Medidas de acción climática');	
+  control_capas.addOverlay(capa_cantones_medidas, 'Medidas de acción climática');	
 
   // Leyenda de la capa de coropletas
-  var leyenda = L.control({ position: 'bottomleft' })
+  var leyenda = L.control({ position: 'topright' })
   leyenda.onAdd = function (mapa) {
     var div = L.DomUtil.create('div', 'info legend')
-    var limits = capa_cantones_gam_coropletas.options.limits
-    var colors = capa_cantones_gam_coropletas.options.colors
+    var limits = capa_cantones_medidas.options.limits
+    var colors = capa_cantones_medidas.options.colors
     var labels = []
 
     // Add min & max
