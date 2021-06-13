@@ -44,7 +44,7 @@ Nombre del archivo: ```datos/cantones-medidas.geojson```
 Se obtuvo con el siguiente comando ```ogr2ogr```:
 ```sh
 $ cd datos
-$ ogr2ogr -sql "select cantones.*, cast(medidas.medidas as integer) from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
+$ ogr2ogr -sql "select cantones.provincia AS provincia, cantones.cod_canton AS cod_canton, cantones.canton AS canton, cast(medidas.medidas as integer) AS medidas from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
 ```
 
 ## Procesamiento
