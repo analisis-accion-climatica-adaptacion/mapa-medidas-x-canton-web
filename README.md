@@ -1,8 +1,8 @@
 # Mapa de medidas de acción climática por cantón - versión web
 Este repositorio contiene el código fuente de un programa que construye un mapa que muestra la cantidad de medidas de acción climática en cada cantón de Costa Rica. Se programó en el lenguaje [JavaScript](https://en.wikipedia.org/wiki/JavaScript), con la biblioteca [Leaflet](https://leafletjs.com/) y su complemento [Leaflet Choropleth](https://github.com/timwis/leaflet-choropleth).
 
-El mapa puede verse en:
-
+El mapa puede visualizarse en la dirección:  
+[https://analisis-accion-climatica-adaptacion.github.io/mapa-medidas-x-canton-web/](https://analisis-accion-climatica-adaptacion.github.io/mapa-medidas-x-canton-web/)
 
 ## Entradas
 **1. Archivo GeoJSON con capa geoespacial de cantones de Costa Rica**  
@@ -48,5 +48,12 @@ $ ogr2ogr -sql "select cantones.provincia AS provincia, cantones.cod_canton AS c
 ```
 
 ## Procesamiento
+El código fuente de la aplicación web está disponible en:  
+[https://github.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web](https://github.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web)
+
+El procesamiento se realiza principalmente con el archivo JavaScript:  
+[https://github.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web/blob/main/js/scripts.js](https://github.com/analisis-accion-climatica-adaptacion/mapa-medidas-x-canton-web/blob/main/js/scripts.js)
 
 ## Salidas
+El resultante mapa puede visualizarse en la dirección:  
+[https://analisis-accion-climatica-adaptacion.github.io/mapa-medidas-x-canton-web/](https://analisis-accion-climatica-adaptacion.github.io/mapa-medidas-x-canton-web/)
