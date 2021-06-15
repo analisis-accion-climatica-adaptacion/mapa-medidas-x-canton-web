@@ -31,7 +31,7 @@ $ cut -d, -f4-5 temp.csv > medidas.csv
 $ rm temp.csv
 ```
 
-b. Se abrió el archivo en Calc y se ordenó por ```cod_canton```.
+b. Se abrió el archivo ```medidas.csv``` en Calc y se ordenó por ```cod_canton```.
 
 c. Se agregó manualmente una columna llamada ```provincia``` con el nombre de la provincia.
 
