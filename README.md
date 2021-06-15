@@ -12,7 +12,9 @@ Nombre del archivo: ```datos/cantones.geojson```
 Se obtuvo del nodo del Instituto Geográfico Nacional (IGN) en el [Sistema Nacional de Información Territorial (SNIT)](https://www.snitcr.go.cr/), con el comando [ogr2ogr](https://gdal.org/programs/ogr2ogr.html#ogr2ogr) de la biblioteca [Geospatial Data Abstraction Library (GDAL)](https://gdal.org/):
 ```sh
 $ cd datos
-$ ogr2ogr -t_srs EPSG:4326 -makevalid -nln cantones cantones.geojson WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"
+
+# Si falla el parámetro "-makevalid" del siguiente comando (debido que no está en la versión de GDAL que se está utilizando), debe removerse
+$ ogr2ogr -t_srs EPSG:4326 -simplify 10 -makevalid -nln cantones cantones.geojson WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"
 ```
 
 **2. Archivo CSV con datos de medidas de acción climática en adaptación por cantón**  
@@ -44,14 +46,8 @@ Nombre del archivo: ```datos/cantones-medidas.geojson```
 Se obtuvo con el siguiente comando ```ogr2ogr```:
 ```sh
 $ cd datos
-$ ogr2ogr -t_srs EPSG:5367 cantones-crtm05.geojson cantones.geojson
-$ ogr2ogr -simplify 10 cantones-simp10-crtm05.geojson cantones-crtm05.geojson
-$ ogr2ogr -t_srs EPSG:4326 cantones.geojson cantones-simp10-crtm05.geojson
 $ ogr2ogr -sql "select cantones.provincia AS provincia, cantones.cod_canton AS cod_canton, cantones.canton AS canton, cast(medidas.medidas as integer) AS medidas from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
-$ rm cantones-crtm05.geojson
-$ rm cantones-simp10-crtm05.geojson
 ```
-**NOTA: la simplificación debería realizarse desde el principio**
 
 ## Procesamiento
 El código fuente de la aplicación web está disponible en:  
