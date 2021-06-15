@@ -24,7 +24,7 @@ var capas_base = {
 
 
 // Control de mini mapa
-var mini_map = new L.Control.MiniMap(capa_osm2, { toggleDisplay: true, position: 'bottomleft' }).addTo(mapa);
+var mini_map = new L.Control.MiniMap(capa_osm2, { toggleDisplay: true, position: 'topleft' }).addTo(mapa);
 
 // Control de capas
 control_capas = L.control.layers(capas_base).addTo(mapa);	
