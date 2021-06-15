@@ -47,6 +47,8 @@ $ cd datos
 $ ogr2ogr -sql "select cantones.provincia AS provincia, cantones.cod_canton AS cod_canton, cantones.canton AS canton, cast(medidas.medidas as integer) AS medidas from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
 ```
 
+**Todos los archivos de datos deben actualizarse en este repositorio en GitHub para que así puedan ser procesados por la aplicación web.**
+
 **Todos los archivos se respaldaron en la dirección [https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing](https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing).**
 
 ## Procesamiento
