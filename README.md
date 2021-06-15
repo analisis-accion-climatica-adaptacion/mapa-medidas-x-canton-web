@@ -37,8 +37,6 @@ c. Se agregó manualmente una columna llamada ```provincia``` con el nombre de l
 
 d. Se agregó manualmente una columna llamada ```medidas``` con la cantidad de medidas de acción climática para cada cantón, provenientes del archivo ```datos/originales/Acciones de adaptación por cantón EVC.xlsx```, proporcionado por Erick Vargas.
 
-e. El archivo se guardó y se publicó también en la dirección [https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing](https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing).
-
 **3. Archivo GeoJSON con capa geoespacial de cantones más la columna ```medidas``` proveniente del archivo CSV con datos de medidas de acción climática**  
 
 Nombre del archivo: ```datos/cantones-medidas.geojson```  
@@ -48,6 +46,8 @@ Se obtuvo con el siguiente comando ```ogr2ogr```:
 $ cd datos
 $ ogr2ogr -sql "select cantones.provincia AS provincia, cantones.cod_canton AS cod_canton, cantones.canton AS canton, cast(medidas.medidas as integer) AS medidas from cantones left join 'medidas.csv'.medidas on cantones.cod_canton = medidas.cod_canton" cantones-medidas.geojson cantones.geojson
 ```
+
+**Todos los archivos se respaldaron en la dirección [https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing](https://drive.google.com/drive/folders/1q0Nt_ohZvVyT4HHexorfUXUgg14rm_4x?usp=sharing).**
 
 ## Procesamiento
 El código fuente de la aplicación web está disponible en:  
